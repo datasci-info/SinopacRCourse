@@ -1,6 +1,11 @@
 
-load("hatepolitics.rda")
-load("gossiping.rda")
+
+if(.Platform$OS.type != "unix"){
+  load("hatepolitics.rda")
+  load("gossiping.rda")
+} else{
+  load("articles_big5.rds")
+} 
 
 library(jiebaR)
 mixseg = worker()
