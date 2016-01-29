@@ -78,7 +78,7 @@ cleantoCorpus <- function(corpus){
 NBA_Corpus <- cleantoCorpus(NBA_News)
 NBA2.dtm <- DocumentTermMatrix(NBA_Corpus)
 dim(NBA2.dtm)
-View(as.matrix(NBA2.dtm))
+# View(as.matrix(NBA2.dtm))
 
 NBA2.dtm
 NBA3.dtm <- removeSparseTerms(NBA2.dtm,0.6)
