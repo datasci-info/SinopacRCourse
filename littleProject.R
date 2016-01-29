@@ -22,7 +22,13 @@ readSpeaker <- function(file,sep){
 }
 
 # 講者清單
-download.file("https://raw.githubusercontent.com/datasci-info/SinopacRCourse/master/speaker", destfile = "speaker.txt")
+if(.Platform$OS.type != "unix"){
+  speakerUrl <- "https://raw.githubusercontent.com/datasci-info/SinopacRCourse/master/speaker.txt"
+  download.file(speakerUrl, destfile = "speaker.txt")
+} else{
+  speakerUrl <- "https://raw.githubusercontent.com/datasci-info/SinopacRCourse/master/speaker_big5.txt"
+  download.file(speakerUrl, destfile = "speaker_big5.txt")
+} 
 speakers <- readSpeaker("speaker.txt",sep="-----")
 length(speakers);speakers[1]
 
