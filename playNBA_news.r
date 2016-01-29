@@ -98,9 +98,11 @@ pal2 <- brewer.pal(8,"Dark2")
 wordcloud(words[1:50], frequency[1:50], scale = c(6,0.5), max.words = 100,
           random.order=FALSE, rot.per=0.1, colors = pal2)
 
-#### classification ####
-libs <- c("tm", "dplyr", "class")
-lapply(libs,require, character.only=TRUE)
+
+
+# #### classification ####
+# libs <- c("tm", "dplyr", "class")
+# lapply(libs,require, character.only=TRUE)
 
 
 
