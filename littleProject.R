@@ -27,7 +27,7 @@ if(.Platform$OS.type != "unix"){
   download.file(speakerUrl, destfile = "speaker.txt")
 } else{
   speakerUrl <- "https://raw.githubusercontent.com/datasci-info/SinopacRCourse/master/speaker_big5.txt"
-  download.file(speakerUrl, destfile = "speaker_big5.txt")
+  download.file(speakerUrl, destfile = "speaker.txt")
 } 
 speakers <- readSpeaker("speaker.txt",sep="-----")
 length(speakers);speakers[1]
