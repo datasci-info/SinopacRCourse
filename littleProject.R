@@ -22,7 +22,8 @@ readSpeaker <- function(file,sep){
 }
 
 # 講者清單
-speakers <- readSpeaker("speaker",sep="-----")
+download.file("https://raw.githubusercontent.com/datasci-info/SinopacRCourse/master/speaker", destfile = "speaker.txt")
+speakers <- readSpeaker("speaker.txt",sep="-----")
 length(speakers);speakers[1]
 
 # 斷詞
